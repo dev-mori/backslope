@@ -63,3 +63,5 @@ gem 'devise'
 group :production do
   gem 'pg'
 end
+
+gem 'kaminari', '~> 0.17.0'
