@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'home#index'
+  root 'tweets#index'
   get 'home/show'
   resources :users
   resources :tweets do

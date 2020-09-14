@@ -1,11 +1,6 @@
-<h2>Home</h2>
-<div class="contents row">
-  <%= form_tag('/tweets', method: :post) do %>
-    <textarea cols="30" name="text" placeholder="いまどうしてる？" rows="10"></textarea>
-    <br/>
-    <input type="submit" value="ツイートする">
-  <% end %>
-</div>
+<h1>ユーザー名:<%= @user.username %></h1>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
+<%= link_to 'ツイートを投稿する', tweets_path, {class: 'btn btn-primary withripple' }%>
 <% @tweets.each do |tweet| %>
   <div class="contents row" >
     <div class="name3">投稿者:<%= link_to tweet.user.username, user_path(tweet.user), method: :get %></div>
