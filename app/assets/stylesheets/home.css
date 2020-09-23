@@ -1,0 +1,235 @@
+#rootpage .blue {
+  background-color: #1da1f2;
+  height: 200px;
+}
+
+#rootpage .blue i {
+  color: white;
+  padding-top: 60px;
+  font-size: 60px;
+  width: 100%;
+  padding-left: 40%;
+}
+
+#rootpage .blue2 {
+  background-color: #1da1f2;
+  height: 700px;
+}
+
+#rootpage .contents {
+  margin: 100px 0;
+}
+
+#rootpage h1 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 530;
+  margin-bottom: 30px;
+}
+
+#rootpage h2 {
+  color: #585858;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+#rootpage .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 26%;
+  margin: 0 auto;
+}
+
+#rootpage .post {
+  color: white;
+  padding: 1em 2em;
+  background-color: #1da1f2;
+  border-radius: 35px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+#loginpage h2 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+#loginpage i {
+  width: 100%;
+  text-align: center;
+  color: #1da1f2;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+#loginpage #new_user {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#loginpage #new_user input[type="email"] {
+  width: 100%;
+  height: 30px;
+}
+
+#loginpage #new_user input[type="password"] {
+  width: 100%;
+  height: 30px;
+}
+
+#loginpage #new_user .inp {
+  width: 100%;
+  text-align: left;
+  padding: 0.8em;
+  margin-bottom: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #c2ccd3;
+}
+
+#loginpage #new_user .df {
+  text-align: left;
+}
+
+#loginpage #new_user #forgetps {
+  text-decoration: none;
+  margin-left: 7px;
+  margin-top: 3px;
+}
+
+#loginpage #new_user #login {
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+#loginpage .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 47%;
+  margin: 0 auto;
+}
+
+#loginpage .last .p-last {
+  color: #858586;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+#loginpage .last a {
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+#signup h2 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+#signup i {
+  width: 100%;
+  text-align: center;
+  color: #1da1f2;
+  font-size: 60px;
+  margin: 20px 0 10px 0;
+}
+
+#signup #new_user {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#signup #new_user #user_email {
+  margin-top: 30px;
+}
+
+#signup #new_user input[type="text"] {
+  width: 100%;
+  height: 30px;
+}
+
+#signup #new_user input[type="email"] {
+  width: 100%;
+  height: 30px;
+}
+
+#signup #new_user input[type="password"] {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#signup #new_user .inp {
+  width: 100%;
+  text-align: left;
+  padding: 0.8em;
+  margin-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #c2ccd3;
+}
+
+#signup #new_user #login {
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 15px;
+}
+
+#signup #new_user .df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#signup #new_user #forgetps {
+  text-decoration: none;
+  margin-left: 7px;
+}
+
+#signup #new_user #login {
+  background-color: #1da1f2;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#signup .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 47%;
+  margin: 0 auto;
+}
+
+#signup .last .p-last {
+  color: #858586;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+#signup .last a {
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 50px;
+}
+/*# sourceMappingURL=home.css.map */
