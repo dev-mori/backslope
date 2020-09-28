@@ -165,7 +165,7 @@ body {
     justify-content: space-between;
 
     .side-nav {
-      width: 28%;
+      width: 31%;
       height: 100vh;
       align-content: right;
       background-color: white;
@@ -213,9 +213,90 @@ body {
       }
     }
 
+    .home-center {
+      width: 31.8%;
+      background-color: rgb(230, 236, 240);
+      .home-title {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        margin-bottom: 2px;
+        padding: 17px;
+        p {
+          font-weight: bold;
+        }
+      }
+
+      .tweeting-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 9px;
+        .tweeting-user-icon {
+          img {
+            width: 43px;
+          }
+        }
+        .tweet-input-content {
+          .tweeting-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            .tweeting-icons {
+              color: rgba(29, 161, 242, 0.7);
+              i {
+                margin-right: 9px;
+              }
+            }
+            .tweet-button {
+              color: white;
+              padding: 7px 12px;
+              background-color: rgb(29, 161, 242);
+              border-radius: 35px;
+              text-decoration: none;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .tweet {
+        display: flex;
+        padding: 6px 12px;
+        background-color: white;
+        .user-icon {
+          margin-right: 12px;
+          img {
+            width: 43px;
+          }
+        }
+        .tweet-contents {
+          width: 80%;
+          .tweet-top {
+            .user-name {
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+          .tweet-text {
+            width: 100%;
+            margin: 5px 0;
+            word-wrap: break-word;
+            // background-color: yellow;
+          }
+          .tweet-options {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+
     .side-right {
       background-color: white;
-      width: 31%;
+      width: 37%;
       .side-right-contents {
         width: 70%;
         margin-left: 15px;

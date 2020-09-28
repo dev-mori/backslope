@@ -17,32 +17,69 @@
     </nav>
     <button class="side-btn">ツイートする</button>
   </section>
-  <div>
-    <h2>Home</h2>
-    <div class="contents row">
-      <%= form_tag('/tweets', method: :post) do %>
-        <textarea cols="30" name="text" placeholder="いまどうしてる？" rows="10"></textarea>
-        <br/>
-        <input type="submit" value="ツイートする">
-      <% end %>
+
+
+  <div class="home-center">
+    <div class="home-title">
+      <p>ホーム</p>
+      <span><i class="fas fa-star-of-life home-h-icon"></i></span>
     </div>
-    <% @tweets.each do |tweet| %>
-      <div class="contents row" >
-        <div class="name3">投稿者:<%= link_to tweet.user.username, user_path(tweet.user), method: :get %></div>
-        <div class="name2">投稿日時:<%= tweet.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
-        <div class="name2"><%= link_to '詳細', tweet_path(tweet), method: :get %></div>
-        <% if user_signed_in? && current_user.id == tweet.user_id %>
-          <div class="name2">
-            <%= link_to '編集', edit_tweet_path(tweet), method: :get %>
+    <div class="tweeting-content">
+      <div class="tweeting-user-icon">
+        <img src="/assets/boxicon.png">
+      </div>
+      <div class="tweet-input-content">
+        <%= form_tag('/tweets', method: :post) do %>
+          <div class="tweet-input">
+            <textarea cols="60" rows="3" name="text" placeholder="いまどうしてる？" style="border:none;"></textarea>
           </div>
-          <div class="name2">
-            <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+          <div class="tweeting-options">
+            <div class="tweeting-icons">
+              <i class="fas fa-image fa-lg"></i>
+              <i class="fas fa-gift fa-lg"></i>
+              <i class="fas fa-gift fa-lg"></i>
+              <i class="far fa-grin-alt fa-lg"></i>
+              <i class="far fa-calendar-alt fa-lg"></i>
+            </div>
+            <input class="tweet-button" type="submit" value="ツイートする">
           </div>
         <% end %>
-        <div class="name3"><%= simple_format(tweet.text) %></div>
+      </div>
+    </div>
+    
+
+    <% @tweets.each do |tweet| %>
+      <div class="tweet">
+        <div class="user-icon">
+          <img src="/assets/boxicon.png">
+        </div>
+        <div class="tweet-contents">
+          <div class="tweet-top">
+            <%= link_to tweet.user.username, user_path(tweet.user), method: :get, class: 'user-name' %>
+            <%= tweet.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+          </div>
+          <div class="tweet-text">
+            <%= simple_format(tweet.text) %>
+          </div>
+          <div class="tweet-options">
+            <%= link_to tweet_path(tweet), method: :get do %>
+              <i class="far fa-comment"></i>
+            <% end %>
+            <% if user_signed_in? && current_user.id == tweet.user_id %>
+              <%= link_to edit_tweet_path(tweet), method: :get do %>
+                <i class="fas fa-pencil-alt"></i>
+              <% end %>
+              <%= link_to "/tweets/#{tweet.id}", method: :delete do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+              <i class="far fa-heart"></i>
+            <% end %>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
+
   <section class="side-right">
   <div class="side-right-contents">
     <form action="">
@@ -53,7 +90,7 @@
       <div class="rcm-contents">
         <div class="rcm-content">
           <div class="rcm-img">
-            <img src="../img/panda.jpg" alt="" width="100%" class="top-img">
+            <img src="#" alt="" width="100%" class="top-img">
           </div>
           <div class="rcm-name">
             <h2>WWF</h2>

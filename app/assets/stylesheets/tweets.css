@@ -175,7 +175,7 @@ body #master {
 }
 
 body #master .side-nav {
-  width: 28%;
+  width: 31%;
   height: 100vh;
   -ms-flex-line-pack: right;
       align-content: right;
@@ -231,9 +231,116 @@ body #master .side-nav .side-btn {
   font-weight: bolder;
 }
 
+body #master .home-center {
+  width: 31.8%;
+  background-color: #e6ecf0;
+}
+
+body #master .home-center .home-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  margin-bottom: 2px;
+  padding: 17px;
+}
+
+body #master .home-center .home-title p {
+  font-weight: bold;
+}
+
+body #master .home-center .tweeting-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 9px;
+}
+
+body #master .home-center .tweeting-content .tweeting-user-icon img {
+  width: 43px;
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options .tweeting-icons {
+  color: rgba(29, 161, 242, 0.7);
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options .tweeting-icons i {
+  margin-right: 9px;
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options .tweet-button {
+  color: white;
+  padding: 7px 12px;
+  background-color: #1da1f2;
+  border-radius: 35px;
+  text-decoration: none;
+  border: none;
+}
+
+body #master .home-center .tweet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px 12px;
+  background-color: white;
+}
+
+body #master .home-center .tweet .user-icon {
+  margin-right: 12px;
+}
+
+body #master .home-center .tweet .user-icon img {
+  width: 43px;
+}
+
+body #master .home-center .tweet .tweet-contents {
+  width: 80%;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-top .user-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-text {
+  width: 100%;
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 body #master .side-right {
   background-color: white;
-  width: 31%;
+  width: 37%;
 }
 
 body #master .side-right .side-right-contents {
