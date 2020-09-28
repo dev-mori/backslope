@@ -41,6 +41,8 @@
   display: flex;
   width: 26%;
   margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #rootpage .post {

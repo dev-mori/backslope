@@ -39,8 +39,10 @@
     display: flex;
     width: 26%;
     margin: 0 auto;
+    justify-content: space-around;
   }
   .post {
+    // width: 70px;
     color: white;
     padding: 1em 2em;
     background-color: rgb(29, 161, 242);
