@@ -26,7 +26,9 @@
     </div>
     <div class="tweeting-content">
       <div class="tweeting-user-icon">
-        <img src="/assets/boxicon.png">
+        <%= link_to user_path(@user), method: :get do %>
+          <img src="/assets/boxicon.png">
+        <% end %>
       </div>
       <div class="tweet-input-content">
         <%= form_tag('/tweets', method: :post) do %>
@@ -51,7 +53,7 @@
     <% @tweets.each do |tweet| %>
       <div class="tweet">
         <div class="user-icon">
-          <img src="/assets/boxicon.png">
+          <img src="/assets/boxicon.png">       
         </div>
         <div class="tweet-contents">
           <div class="tweet-top">
@@ -72,8 +74,21 @@
               <%= link_to "/tweets/#{tweet.id}", method: :delete do %>
                 <i class="far fa-trash-alt"></i>
               <% end %>
-              <i class="far fa-heart"></i>
             <% end %>
+            <div>
+              <% if !Like.find_by(user_id: @user.id, tweet_id: tweet.id) %>
+                <%= link_to likes_create_path(user_id: @user.id, tweet_id: tweet.id), method: "post" do %>
+                <i class="far fa-heart"></i>
+                <% end %>
+              <% else %>
+                <%= link_to likes_destroy_path(user_id: @user.id, tweet_id: tweet.id), method: "post" do %>
+                <i class="fas fa-heart fa-red"></i>
+                <% end %>
+              <% end %>
+              <% if Like.where(tweet_id: tweet.id).count != 0 %>
+                <span><%= Like.where(tweet_id: tweet.id).count %></span>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>

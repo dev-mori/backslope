@@ -338,6 +338,10 @@ body #master .home-center .tweet .tweet-contents .tweet-options {
           justify-content: space-between;
 }
 
+body #master .home-center .tweet .tweet-contents .tweet-options .fa-red {
+  color: red;
+}
+
 body #master .side-right {
   background-color: white;
   width: 37%;

@@ -288,6 +288,9 @@ body {
           .tweet-options {
             display: flex;
             justify-content: space-between;
+            .fa-red {
+              color: red;
+            }
           }
         }
       }
