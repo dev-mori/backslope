@@ -18,7 +18,6 @@
     <button class="side-btn">ツイートする</button>
   </section>
 
-
   <div class="home-center">
     <div class="home-title">
       <p>ホーム</p>
@@ -48,12 +47,10 @@
         <% end %>
       </div>
     </div>
-    
-
     <% @tweets.each do |tweet| %>
       <div class="tweet">
         <div class="user-icon">
-          <img src="/assets/boxicon.png">       
+          <img src="/assets/boxicon.png">
         </div>
         <div class="tweet-contents">
           <div class="tweet-top">
@@ -77,11 +74,11 @@
             <% end %>
             <div>
               <% if !Like.find_by(user_id: @user.id, tweet_id: tweet.id) %>
-                <%= link_to likes_create_path(user_id: @user.id, tweet_id: tweet.id), method: "post" do %>
+                <%= link_to likes_create_path(tweet_id: tweet.id), method: "post" do %>
                 <i class="far fa-heart"></i>
                 <% end %>
               <% else %>
-                <%= link_to likes_destroy_path(user_id: @user.id, tweet_id: tweet.id), method: "post" do %>
+                <%= link_to likes_destroy_path(tweet_id: tweet.id), method: "post" do %>
                 <i class="fas fa-heart fa-red"></i>
                 <% end %>
               <% end %>

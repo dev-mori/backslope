@@ -4,7 +4,8 @@ class TweetsController < ApplicationController
     @user = current_user
     # @search = Tweet.search(params[:q])
     # @tweets = @search.result.includes(:user).order("created_at DESC").page(params[:page]).per(20)
-    @tweets = Tweet.where(user_id: @user.id)
+    # @tweets = Tweet.where(user_id: @user.id)
+    @tweets = Tweet.all
   end
 
   def new

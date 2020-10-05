@@ -1,4 +1,16 @@
 <h1>ユーザー名:<%= @user.username %></h1>
+<% if user_signed_in? && current_user.id == @user.id %>
+  <button>プロフィール編集</button>
+<% elsif !Follow.find_by(follow_id: current_user.id, follower_id: @user.id) %>
+  <%= link_to follows_create_path(follower_id: @user.id), method: "post" do %>
+    <button>フォロー</button>
+  <% end %>
+<% else %>
+  <%= link_to follows_destroy_path(follower_id: @user.id), method: "post" do %>
+    <button>フォロー中</button>
+  <% end %>
+<% end %>
+
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
 <%= link_to 'ツイートを投稿する', tweets_path, {class: 'btn btn-primary withripple' }%>
 <% @tweets.each do |tweet| %>

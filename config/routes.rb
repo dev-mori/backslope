@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root 'tweets#index'
   post '/tweets/likes/:tweet_id/create', to: 'likes#create', as: :likes_create
   post '/tweets/likes/:tweet_id/destroy', to: 'likes#destroy', as: :likes_destroy
+  post '/users/follows/:follower_id/create', to: 'follows#create', as: :follows_create
+  post '/users/follows/:follower_id/destroy', to: 'follows#destroy', as: :follows_destroy
+
   get 'home/index' => 'home#index'
   resources :users
   resources :tweets do
