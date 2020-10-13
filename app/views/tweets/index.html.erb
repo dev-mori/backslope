@@ -1,17 +1,17 @@
 <div id="master">
   <section class="side-nav">
     <div class="top-icon">
-      <i class="fab fa-twitter icon"></i>
+      <%= link_to tweets_path, method: :get do %><i class="fab fa-twitter icon"></i><% end %>
     </div>
     <nav>
       <ul>
-        <li><a class="home-blue" href="#"><i class="icon fas fa-home"></i>ホーム</a></li>
+        <li><a class="home-blue" href=""><i class="icon fas fa-home"></i>ホーム</a></li>
         <li><a href="#"><i class="icon fas fa-hashtag"></i>話題を検索</a></li>
         <li><a href="#"><i class="icon far fa-bell"></i>通知</a></li>
         <li><a href="#"><i class="icon far fa-envelope"></i>メッセージ</a></li>
         <li><a href="#"><i class="icon far fa-bookmark"></i>ブックマーク</a></li>
         <li><a href="#"><i class="icon fas fa-stream"></i>リスト</a></li>
-        <li><a href="#"><i class="icon far fa-user"></i>プロフィール</a></li>
+        <li><%= link_to user_path(@user), method: :get do %><i class="icon far fa-user"></i>プロフィール<% end %></li>
         <li><a href="#"><i class="icon fas fa-ellipsis-h"></i>もっと見る</a></li>
       </ul>
     </nav>
@@ -19,7 +19,7 @@
   </section>
 
   <div class="home-center">
-    <div class="home-title">
+    <div class="tweets-title">
       <p>ホーム</p>
       <span><i class="fas fa-star-of-life home-h-icon"></i></span>
     </div>

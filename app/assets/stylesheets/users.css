@@ -1,1 +1,518 @@
-/* No CSS *//*# sourceMappingURL=users.css.map */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #e6ecf0;
+  margin: 0;
+}
+
+body #master {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #master .side-nav {
+  width: 31%;
+  height: 100vh;
+  -ms-flex-line-pack: right;
+      align-content: right;
+  background-color: white;
+}
+
+body #master .side-nav .top-icon {
+  margin-bottom: 2em;
+  margin-top: 10px;
+}
+
+body #master .side-nav .top-icon .icon {
+  color: #1da1f2;
+  margin-left: 50.5%;
+  font-size: 27px;
+}
+
+body #master .side-nav ul {
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+body #master .side-nav ul li {
+  font-weight: bold;
+  margin-left: 50%;
+  font-size: 20px;
+  margin-bottom: 2em;
+}
+
+body #master .side-nav ul li a {
+  width: 100%;
+  display: inline-block;
+}
+
+body #master .side-nav ul li .home-blue {
+  color: #1da1f2;
+}
+
+body #master .side-nav ul li .icon {
+  font-size: 27px;
+  margin-right: 20px;
+  width: 31px;
+  text-align: center;
+}
+
+body #master .side-nav .side-btn {
+  padding: 1em 4em;
+  color: white;
+  background-color: #1da1f2;
+  margin-left: 50%;
+  border-radius: 30px;
+  border: none;
+  font-weight: bolder;
+}
+
+body #master .home-center {
+  width: 31.8%;
+  background-color: #e6ecf0;
+}
+
+body #master .home-center .home-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin-bottom: 3px;
+  padding: 10px;
+}
+
+body #master .home-center .home-title span {
+  color: #1da1f2;
+}
+
+body #master .home-center .home-title .title-text {
+  margin-left: 15px;
+}
+
+body #master .home-center .home-title .title-text p {
+  margin-left: 3px;
+}
+
+body #master .home-center .home-title .title-text h1 {
+  color: #a0a0a0;
+}
+
+body #master .home-center .home-title p {
+  font-weight: bold;
+}
+
+body #master .home-center .user-info {
+  position: relative;
+}
+
+body #master .home-center .user-info .user-image {
+  height: 210px;
+}
+
+body #master .home-center .user-info .user-image img {
+  width: 100%;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body #master .home-center .user-info .user-icon {
+  position: absolute;
+  top: 125px;
+  left: 15px;
+  width: 120px;
+  height: 120px;
+  border: thick solid #ffffff;
+  border-radius: 50%;
+  background-color: #fbffd3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #master .home-center .user-info .user-icon img {
+  width: 80%;
+}
+
+body #master .home-center .user-info .info-text {
+  background-color: white;
+  padding: 12px;
+}
+
+body #master .home-center .user-info .info-text .info-button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+body #master .home-center .user-info .info-options {
+  background-color: white;
+}
+
+body #master .home-center .tweeting-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 9px;
+}
+
+body #master .home-center .tweeting-content .tweeting-user-icon img {
+  width: 43px;
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options .tweeting-icons {
+  color: rgba(29, 161, 242, 0.7);
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options .tweeting-icons i {
+  margin-right: 9px;
+}
+
+body #master .home-center .tweeting-content .tweet-input-content .tweeting-options .tweet-button {
+  color: white;
+  padding: 7px 12px;
+  background-color: #1da1f2;
+  border-radius: 35px;
+  text-decoration: none;
+  border: none;
+}
+
+body #master .home-center .tweet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px 12px;
+  background-color: white;
+}
+
+body #master .home-center .tweet .user-icon {
+  margin-right: 12px;
+}
+
+body #master .home-center .tweet .user-icon img {
+  width: 43px;
+}
+
+body #master .home-center .tweet .tweet-contents {
+  width: 80%;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-top .user-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-text {
+  width: 100%;
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #master .home-center .tweet .tweet-contents .tweet-options .fa-red {
+  color: red;
+}
+
+body #master .side-right {
+  background-color: white;
+  width: 37%;
+}
+
+body #master .side-right .side-right-contents {
+  width: 70%;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+body #master .side-right #search {
+  background-color: #253341;
+  color: #7f909c;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+body #master .side-right .rcm {
+  width: 100%;
+  background-color: #192734;
+  border-radius: 15px;
+}
+
+body #master .side-right .rcm h1 {
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid #7f909c;
+  padding: 10px;
+}
+
+body #master .side-right .rcm .rcm-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+body #master .side-right .rcm .rcm-content .rcm-img {
+  width: 10%;
+}
+
+body #master .side-right .rcm .rcm-content .rcm-name {
+  padding-top: 5px;
+}
+
+body #master .side-right .rcm .rcm-content .rcm-name h2 {
+  color: white;
+  font-size: 13px;
+}
+
+body #master .side-right .rcm .rcm-content .rcm-name p {
+  color: #8899a6;
+  font-size: 10px;
+}
+
+body #master .side-right .rcm .rcm-content .skelton {
+  color: #1c95e0;
+  background-color: rgba(25, 39, 52, 0);
+  border: solid 1px #1c95e0;
+  border-radius: 30px;
+  padding: 0.5em 1em;
+}
+
+body #master .side-right .trend {
+  background-color: #192734;
+  width: 100%;
+  border-radius: 15px;
+}
+
+body #master .side-right .trend h1 {
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid #7f909c;
+  padding: 10px;
+}
+
+body #master .side-right .trend .trend-contents .trend-content {
+  margin-left: 10px;
+  padding: 10px 0;
+}
+
+body #master .side-right .trend .trend-contents .trend-content p {
+  color: #7f909c;
+  font-size: 10px;
+  padding: 5px;
+}
+
+body #master .side-right .trend .trend-contents .trend-content h2 {
+  color: white;
+  font-size: 13px;
+  padding: 5px;
+}
+/*# sourceMappingURL=users.css.map */

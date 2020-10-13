@@ -1,8 +1,7 @@
-<div id="loginpage">
+<div id="login_page">
   <h2>ログイン</h2>
   <hr>
   <i class="fab fa-twitter" ></i>
-
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="new_user">
       <%= f.email_field :email, autofocus: true, placeholder: 'Eメール', autocomplete: "email" %>
@@ -27,12 +26,13 @@
       <%= f.submit "ログイン" %>
     </div>
   <% end %>
-  <div>
-    <%= render "devise/shared/links" %>
-  </div>  
+  
 </div>
-
-
+<hr>
+<div>
+  <%= render "devise/shared/links" %>
+</div>  
+  
 <!-- <br><br><br><br><br>
       <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
       <label for="user_remember_me">保存する</label>

@@ -158,4 +158,8 @@ a:active {
 a {
   text-decoration: none;
 }
+
+html {
+  background-color: white;
+}
 /*# sourceMappingURL=application.css.map */

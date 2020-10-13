@@ -1,3 +1,445 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(230, 236, 240);
+  margin: 0;
+
+  #master {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .side-nav {
+      width: 31%;
+      height: 100vh;
+      align-content: right;
+      background-color: white;
+      .top-icon {
+        margin-bottom: 2em;
+        margin-top: 10px;
+        .icon {
+          color: rgba(29, 161, 242, 1);
+          margin-left: 50.5%;
+          font-size: 27px;
+        }
+      }
+      ul {
+        list-style: none;
+        margin-bottom: 2em;
+
+        li {
+          font-weight: bold;
+          margin-left: 50%;
+          font-size: 20px;
+          margin-bottom: 2em;
+          a {
+            width: 100%;
+            display: inline-block;
+          }
+          .home-blue {
+            color: rgba(29, 161, 242, 1);
+          }
+          .icon {
+            font-size: 27px;
+            margin-right: 20px;
+            width: 31px;
+            text-align: center;
+          }
+        }
+      }
+      .side-btn {
+        padding: 1em 4em;
+        color: white;
+        background-color: rgb(29, 161, 242);
+        margin-left: 50%;
+        border-radius: 30px;
+        border: none;
+        font-weight: bolder;
+      }
+    }
+
+    .home-center {
+      width: 31.8%;
+      background-color: rgb(230, 236, 240);
+      .home-title {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 3px;
+        padding: 10px;
+        span {
+          color: rgba(29, 161, 242, 1);
+        }
+        .title-text {
+          margin-left: 15px;
+          p {
+            margin-left: 3px;
+          }
+          h1 {
+            color: rgb(160, 160, 160);
+          }
+        }
+        p {
+          font-weight: bold;
+        }
+      }
+      .user-info {
+        position: relative;
+        .user-image {
+          height: 210px;
+          img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+          }
+        }
+        .user-icon {
+          position: absolute;
+          top: 125px;
+          left: 15px;
+          width: 120px;
+          height: 120px;
+          border: thick solid #ffffff;
+          border-radius: 50%;
+          background-color: rgb(251, 255, 211);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 80%;
+          }
+        }
+        .info-text {
+          background-color: white;
+          padding: 12px;
+          .info-button-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 8px;
+            .info-button {
+              // margin-right: 30px;
+            }
+          }
+          .info-wrapper {
+          }
+        }
+        .info-options {
+          background-color: white;
+        }
+      }
+
+      .tweeting-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 9px;
+        .tweeting-user-icon {
+          img {
+            width: 43px;
+          }
+        }
+        .tweet-input-content {
+          .tweeting-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            .tweeting-icons {
+              color: rgba(29, 161, 242, 0.7);
+              i {
+                margin-right: 9px;
+              }
+            }
+            .tweet-button {
+              color: white;
+              padding: 7px 12px;
+              background-color: rgb(29, 161, 242);
+              border-radius: 35px;
+              text-decoration: none;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .tweet {
+        display: flex;
+        padding: 6px 12px;
+        background-color: white;
+        .user-icon {
+          margin-right: 12px;
+          img {
+            width: 43px;
+          }
+        }
+        .tweet-contents {
+          width: 80%;
+          .tweet-top {
+            .user-name {
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+          .tweet-text {
+            width: 100%;
+            margin: 5px 0;
+            word-wrap: break-word;
+          }
+          .tweet-options {
+            display: flex;
+            justify-content: space-between;
+            .fa-red {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    .side-right {
+      background-color: white;
+      width: 37%;
+      .side-right-contents {
+        width: 70%;
+        margin-left: 15px;
+        margin-top: 10px;
+      }
+
+      #search {
+        background-color: rgb(37, 51, 65);
+        color: rgb(127, 144, 156);
+        border: none;
+        border-radius: 20px;
+        padding: 1em;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .rcm {
+        width: 100%;
+        background-color: rgb(25, 39, 52);
+        border-radius: 15px;
+        h1 {
+          color: white;
+          font-size: 20px;
+          border-bottom: 1px solid rgb(127, 144, 156);
+          padding: 10px;
+        }
+        .rcm-content {
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 0;
+          margin-bottom: 20px;
+          .rcm-img {
+            width: 10%;
+          }
+          .rcm-name {
+            padding-top: 5px;
+            h2 {
+              color: white;
+              font-size: 13px;
+            }
+            p {
+              color: rgb(136, 153, 166);
+              font-size: 10px;
+            }
+          }
+          .skelton {
+            color: rgb(28, 149, 224);
+            background-color: rgba(25, 39, 52, 0);
+            border: solid 1px rgb(28, 149, 224);
+            border-radius: 30px;
+            padding: 0.5em 1em;
+          }
+        }
+      }
+
+      .trend {
+        background-color: rgb(25, 39, 52);
+        width: 100%;
+        border-radius: 15px;
+        h1 {
+          color: white;
+          font-size: 20px;
+          border-bottom: 1px solid rgb(127, 144, 156);
+          padding: 10px;
+        }
+        .trend-contents {
+          .trend-content {
+            margin-left: 10px;
+            padding: 10px 0;
+            p {
+              color: rgb(127, 144, 156);
+              font-size: 10px;
+              padding: 5px;
+            }
+            h2 {
+              color: white;
+              font-size: 13px;
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

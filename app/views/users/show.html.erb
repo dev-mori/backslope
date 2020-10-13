@@ -1,31 +1,143 @@
-<h1>ユーザー名:<%= @user.username %></h1>
-<% if user_signed_in? && current_user.id == @user.id %>
-  <button>プロフィール編集</button>
-<% elsif !Follow.find_by(follow_id: current_user.id, follower_id: @user.id) %>
-  <%= link_to follows_create_path(follower_id: @user.id), method: "post" do %>
-    <button>フォロー</button>
-  <% end %>
-<% else %>
-  <%= link_to follows_destroy_path(follower_id: @user.id), method: "post" do %>
-    <button>フォロー中</button>
-  <% end %>
-<% end %>
+<div id="master">
+  <section class="side-nav">
+    <div class="top-icon">
+      <%= link_to tweets_path, method: :get do %><i class="fab fa-twitter icon"></i><% end %>
+    </div>
+    <nav>
+      <ul>
+        <li><%= link_to tweets_path, method: :get do %><i class="icon fas fa-home"></i>ホーム<% end %></li>
+        <li><a href="#"><i class="icon fas fa-hashtag"></i>話題を検索</a></li>
+        <li><a href="#"><i class="icon far fa-bell"></i>通知</a></li>
+        <li><a href="#"><i class="icon far fa-envelope"></i>メッセージ</a></li>
+        <li><a href="#"><i class="icon far fa-bookmark"></i>ブックマーク</a></li>
+        <li><a href="#"><i class="icon fas fa-stream"></i>リスト</a></li>
+        <li><%= link_to user_path(@user), method: :get do %><a class="home-blue" href="#"><i class="icon far fa-user"></i>プロフィール</a><% end %></li>
+        <li><a href="#"><i class="icon fas fa-ellipsis-h"></i>もっと見る</a></li>
+      </ul>
+    </nav>
+    <%= link_to tweets_path, method: :get do %>
+      <button class="side-btn">ツイートする</button>
+    <% end %>
+  </section>
 
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
-<%= link_to 'ツイートを投稿する', tweets_path, {class: 'btn btn-primary withripple' }%>
-<% @tweets.each do |tweet| %>
-  <div class="contents row" >
-    <div class="name3">投稿者:<%= link_to tweet.user.username, user_path(tweet.user), method: :get %></div>
-    <div class="name2">投稿日時:<%= tweet.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
-    <div class="name2"><%= link_to '詳細', tweet_path(tweet), method: :get %></div>
-    <% if user_signed_in? && current_user.id == tweet.user_id %>
-      <div class="name2">
-        <%= link_to '編集', edit_tweet_path(tweet), method: :get %>
+  <div class="home-center">
+    <div class="home-title">
+      <%= link_to tweets_path, method: :get do %>
+        <span><i class="fas fa-arrow-left"></i></span>
+      <% end %>
+      <div class="title-text">
+        <p><%= @user.username %></p>
+        <h1><%= @tweets_count %>件のツイート</h1>
       </div>
-      <div class="name2">
-        <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+    </div>
+    <div class="user-info">
+      <div class="user-image"><img src="/assets/eyecatch34.jpg"></div>
+      <div class="user-icon"><img src="/assets/boxicon.png"></div>
+      <div class="info-text">
+        <div class="info-button-wrapper">
+          <div class="info-button">
+            <button><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></button>
+            <% if user_signed_in? && current_user.id == @user.id %>
+              <button>プロフィール編集</button>
+            <% elsif !Follow.find_by(follow_id: current_user.id, follower_id: @user.id) %>
+              <%= link_to follows_create_path(follower_id: @user.id), method: "post" do %>
+                <button>フォロー</button>
+              <% end %>
+            <% else %>
+              <%= link_to follows_destroy_path(follower_id: @user.id), method: "post" do %>
+                <button>フォロー中</button>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <p style="font-weight: bold; font-size: 20px;"><%= @user.username %></p>
+        <p>Hello World</p>
+        <p>Thank you for watching</p>
+        <div class="follow-wrapper"><a href="#"><%= @follow_count %>フォロー中</a><a href="#"><%= @follower_count %>フォロワー</a></div>
+      </div>
+      <div class="info-options">
+        <a href="#">ツイート</a>
+        <a href="#">ツイートと返信</a>
+        <a href="#">メディア</a>
+        <a href="#">いいね</a>
+      </div>
+    </div>
+
+    <% @tweets.each do |tweet| %>
+      <div class="tweet">
+        <div class="user-icon">
+          <img src="/assets/boxicon.png">
+        </div>
+        <div class="tweet-contents">
+          <div class="tweet-top">
+            <%= link_to tweet.user.username, user_path(tweet.user), method: :get, class: 'user-name' %>
+            <%= tweet.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+          </div>
+          <div class="tweet-text">
+            <%= simple_format(tweet.text) %>
+          </div>
+          <div class="tweet-options">
+            <%= link_to tweet_path(tweet), method: :get do %>
+              <i class="far fa-comment"></i>
+            <% end %>
+            <% if user_signed_in? && current_user.id == tweet.user_id %>
+              <%= link_to edit_tweet_path(tweet), method: :get do %>
+                <i class="fas fa-pencil-alt"></i>
+              <% end %>
+              <%= link_to "/tweets/#{tweet.id}", method: :delete do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            <% end %>
+            <div>
+              <% if !Like.find_by(user_id: @user.id, tweet_id: tweet.id) %>
+                <%= link_to likes_create_path(tweet_id: tweet.id), method: "post" do %>
+                <i class="far fa-heart"></i>
+                <% end %>
+              <% else %>
+                <%= link_to likes_destroy_path(tweet_id: tweet.id), method: "post" do %>
+                <i class="fas fa-heart fa-red"></i>
+                <% end %>
+              <% end %>
+              <% if Like.where(tweet_id: tweet.id).count != 0 %>
+                <span><%= Like.where(tweet_id: tweet.id).count %></span>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
     <% end %>
-    <div class="name3"><%= simple_format(tweet.text) %></div>
   </div>
-<% end %>
+  <section class="side-right">
+  <div class="side-right-contents">
+    <form action="">
+      <input type="text" placeholder="キーワード検索" id="search">
+    </form>
+    <div class="rcm">
+      <h1>おすすめツイート</h1>
+      <div class="rcm-contents">
+        <div class="rcm-content">
+          <div class="rcm-img">
+            <img src="#" alt="" width="100%" class="top-img">
+          </div>
+          <div class="rcm-name">
+            <h2>WWF</h2>
+            <p>@wwf</p>
+          </div>
+          <button class="skelton">フォロー</button>
+        </div>
+      </div>
+    </div>
+    <div class="trend">
+      <h1>いまどうしてる？</h1>
+      <div class="trend-contents">
+        <div class="trend-content">
+          <p>日本のトレンド</p>
+          <h2>台風発生</h2>
+          <p>5572件のツイート</p>
+        </div>
+      </div>
+    </div>  
+  </div>
+  </section>
+</div>
+

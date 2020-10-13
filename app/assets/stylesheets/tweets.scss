@@ -16,7 +16,7 @@
  *= require_tree .
  *= require_self
  */
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -216,7 +216,7 @@ body {
     .home-center {
       width: 31.8%;
       background-color: rgb(230, 236, 240);
-      .home-title {
+      .tweets-title {
         display: flex;
         justify-content: space-between;
         background-color: white;

@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -236,7 +236,7 @@ body #master .home-center {
   background-color: #e6ecf0;
 }
 
-body #master .home-center .home-title {
+body #master .home-center .tweets-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,7 +248,7 @@ body #master .home-center .home-title {
   padding: 17px;
 }
 
-body #master .home-center .home-title p {
+body #master .home-center .tweets-title p {
   font-weight: bold;
 }
 
