@@ -11,7 +11,7 @@
         <li><a href="#"><i class="icon far fa-envelope"></i>メッセージ</a></li>
         <li><a href="#"><i class="icon far fa-bookmark"></i>ブックマーク</a></li>
         <li><a href="#"><i class="icon fas fa-stream"></i>リスト</a></li>
-        <li><%= link_to user_path(@user), method: :get do %><a class="home-blue" href="#"><i class="icon far fa-user"></i>プロフィール</a><% end %></li>
+        <%= link_to user_path(@current_user), method: :get do %><li class="home-blue"><i class="icon far fa-user"></i>プロフィール</li><% end %>
         <li><a href="#"><i class="icon fas fa-ellipsis-h"></i>もっと見る</a></li>
       </ul>
     </nav>
@@ -56,10 +56,10 @@
         <div class="follow-wrapper"><a href="#"><%= @follow_count %>フォロー中</a><a href="#"><%= @follower_count %>フォロワー</a></div>
       </div>
       <div class="info-options">
-        <a href="#">ツイート</a>
-        <a href="#">ツイートと返信</a>
-        <a href="#">メディア</a>
-        <a href="#">いいね</a>
+        <li><a class="current-option" href="#">ツイート</a></li>
+        <li><a href="#">ツイートと返信</a></li>
+        <li><a href="#">メディア</a></li>
+        <li><a href="#">いいね</a></li>
       </div>
     </div>
 

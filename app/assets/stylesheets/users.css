@@ -210,15 +210,15 @@ body #master .side-nav ul li a {
   display: inline-block;
 }
 
-body #master .side-nav ul li .home-blue {
-  color: #1da1f2;
-}
-
 body #master .side-nav ul li .icon {
   font-size: 27px;
   margin-right: 20px;
   width: 31px;
   text-align: center;
+}
+
+body #master .side-nav ul .home-blue {
+  color: #1da1f2;
 }
 
 body #master .side-nav .side-btn {
@@ -270,6 +270,7 @@ body #master .home-center .home-title p {
 
 body #master .home-center .user-info {
   position: relative;
+  margin-bottom: 2px;
 }
 
 body #master .home-center .user-info .user-image {
@@ -322,8 +323,41 @@ body #master .home-center .user-info .info-text .info-button-wrapper {
   margin-bottom: 8px;
 }
 
+body #master .home-center .user-info .info-text .follow-wrapper {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
 body #master .home-center .user-info .info-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  list-style: none;
   background-color: white;
+}
+
+body #master .home-center .user-info .info-options li {
+  text-align: center;
+  width: 25%;
+}
+
+body #master .home-center .user-info .info-options li a {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  padding: 15px 0px;
+}
+
+body #master .home-center .user-info .info-options li .current-option {
+  color: #1da1f2;
+  border-bottom: 2px solid #1da1f2;
 }
 
 body #master .home-center .tweeting-content {
@@ -378,6 +412,7 @@ body #master .home-center .tweet {
   display: flex;
   padding: 6px 12px;
   background-color: white;
+  margin-bottom: 1px;
 }
 
 body #master .home-center .tweet .user-icon {

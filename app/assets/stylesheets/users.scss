@@ -194,15 +194,16 @@ body {
             width: 100%;
             display: inline-block;
           }
-          .home-blue {
-            color: rgba(29, 161, 242, 1);
-          }
+
           .icon {
             font-size: 27px;
             margin-right: 20px;
             width: 31px;
             text-align: center;
           }
+        }
+        .home-blue {
+          color: rgba(29, 161, 242, 1);
         }
       }
       .side-btn {
@@ -243,6 +244,7 @@ body {
       }
       .user-info {
         position: relative;
+        margin-bottom: 2px;
         .user-image {
           height: 210px;
           img {
@@ -278,11 +280,35 @@ body {
               // margin-right: 30px;
             }
           }
-          .info-wrapper {
+          .follow-wrapper {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
           }
         }
         .info-options {
+          display: flex;
+          width: 100%;
+          list-style: none;
+          // padding: 15px;
+          // justify-content: space-around;
+          // align-content: center;
           background-color: white;
+          li {
+            text-align: center;
+            width: 25%;
+            a {
+              display: inline-block;
+              width: 100%;
+              font-weight: bold;
+              padding: 15px 0px;
+            }
+            .current-option {
+              color: rgba(29, 161, 242, 1);
+              border-bottom: 2px solid rgba(29, 161, 242, 1);
+            }
+          }
         }
       }
 
@@ -325,6 +351,7 @@ body {
         display: flex;
         padding: 6px 12px;
         background-color: white;
+        margin-bottom: 1px;
         .user-icon {
           margin-right: 12px;
           img {
